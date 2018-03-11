@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>水平居中布局</title>
+    <link rel="stylesheet" href="../base.css">
+    <style>
+        .parent{
+            padding: 10px;
+            width: auto;
+            border: 1px solid blue;
+        }
+        .child{
+            border: 1px solid red;
+            width: 150px;
+        }
+        div.parent{
+            text-align: center;
+        }
+        div.child{
+            margin: 0 auto;
+        }
+        div.table-parent{
+            text-align: left;
+        }
+        div.table-parent .child{
+            display: table;
+            margin: 0 auto;
+        }
+        div.parent-relative{
+            position: relative;
+            height: 60px;
+        }
+        div.parent-relative .child{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        div.parent-flex {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+<h1>水平居中布局</h1>
+<h2 id="layout_1">行内元素</h2>
+<div class="parent">
+    <span class="child">行内元素 span </span>
+</div>
+<h2 id="layout_2">块元素</h2>
+<div class="parent">
+    <div class="child">
+        块元素 div
+    </div>
+</div>
+<h2 id="layout_3">只设置子元素实现居中布局</h2>
+<div class="table-parent parent">
+    <span class="child">
+        子元素使用display:table;margin:0 auto;可以不用设置父元素实现子元素居中布局
+    </span>
+</div>
+<h2 id="layout_4">使用absolute+transform</h2>
+<div class="parent parent-relative">
+     <div class="child">
+         absolute+transform
+     </div>
+</div>
+<h2 id="layout_5">使用flex + justify-content</h2>
+<div class="parent parent-flex">
+    <p class="child">
+        flex + justify-content
+    </p>
+</div>
+</body>
+</html>

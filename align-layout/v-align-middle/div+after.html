@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>absolute+margin.html</title>
+    <link rel="stylesheet" href="../base.css">
+    <link rel="stylesheet" href="common.css">
+    <style>
+        .parent{
+            width: 100%;
+            height: 100%;
+            /*水平居中*/
+            text-align: center;
+        }
+        .parent:after{
+            content: "";
+            height: 100%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .child{
+            width: 50%;
+            height: 50%;
+            vertical-align: middle;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">
+
+        </div>
+    </div>
+</body>
+</html>
